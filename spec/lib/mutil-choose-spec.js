@@ -1,12 +1,13 @@
 describe("mutilChoose test",function() {
   var answer = [];
+  var theMutilChoose;
   beforeEach(function() {
   answer = [{name:'1-1',value:['A'],score:3},
                   {name:'2-1',value:['B'],score:3},
                   {name:'3-1',value:['A','B','C','D'],score:3}];
-
+  theMutilChoose = new MutilChoose('3-1','checkbox',['A','B','C','D']);
   });
-  var theMutilChoose = new MutilChoose('3-1','checkbox',['A','B','C','D']);
+
   it("check name,value and type",function() {
     MutilChoose.getCorrectAnswer(answer);
     expect(theMutilChoose.name).toBe('3-1');
