@@ -35,9 +35,9 @@ function getResult() {
         return input.id;
       }
     });
-    var string = '' + result.join(" ") + '不能为空';
-    alert(string);
-    // if(name.value === '') {
-    //   alert("name can't be blank");
-    // }
+    if(result[0] !== undefined) {
+      var string = '' + result.join(" ") + '不能为空';
+      alert(string);
+    }
+    alert("提交成功！");
   }
