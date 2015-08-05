@@ -26,3 +26,18 @@ function getResult() {
       document.getElementById('chooseText1').value = getResult();
     });
   });
+
+  function verity() {
+    var result = [];
+    var name = document.getElementsByName('info');
+    result = [].map.call(name,function(input) {
+      if(input.value === '') {
+        return input.id;
+      }
+    });
+    var string = '' + result.join(" ") + '不能为空';
+    alert(string);
+    // if(name.value === '') {
+    //   alert("name can't be blank");
+    // }
+  }
